@@ -1,5 +1,4 @@
 class Post < ApplicationRecord
-  validates :title, presence: true, length: { maximum: 250 }
   attr_accessor :text, :title, :content, :comments_counter, :likes_counter
 
   belongs_to :author, foreign_key: 'author_id', class_name: 'User'
