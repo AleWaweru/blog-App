@@ -60,10 +60,14 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> commands:
-  rails:db create 
-  rails db:migrate, 
-  and then rails server
+ # Database Setup
+
+# Database Setup
+
+```
+rails db:create
+rails db:migrate
+```
 
 ### Prerequisites
 1. Interactive Ruby shell (IRB).
