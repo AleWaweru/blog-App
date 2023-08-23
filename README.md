@@ -85,9 +85,9 @@
 ```
 
 ### Usage
-> comming soon
+> Rspec
 ### Run tests
-> comming soon
+> Rspec
 <!-- ### Deployment
 > npm run build -->
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
