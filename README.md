@@ -85,7 +85,7 @@
 ```
 
 ### Usage
-> Rspec
+> rails server
 ### Run tests
 > Rspec
 <!-- ### Deployment
