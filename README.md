@@ -59,7 +59,15 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
->To get a local copy up and running, follow these steps.
+
+ # Database Setup
+
+# Database Setup
+
+```
+rails db:create
+rails db:migrate
+```
 
 ### Prerequisites
 1. Interactive Ruby shell (IRB).
@@ -81,9 +89,9 @@
 ```
 
 ### Usage
-> comming soon
+> rails server
 ### Run tests
-> comming soon
+> Rspec
 <!-- ### Deployment
 > npm run build -->
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
