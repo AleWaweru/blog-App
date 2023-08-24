@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  validates :name, presence: true
+  # validates :name, presence: true
   attr_accessor :photo
   attr_accessor :bio
 
