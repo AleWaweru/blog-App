@@ -1,1 +1,8 @@
-<h1>Here are the list of users</h1>
+<%= stylesheet_link_tag 'application.tailwind', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<h1 classname='text-blue-300'>Here is the list of users</h1>
+<%= "No users" if @users.empty? %>
+<% @users.each do |user| %>
+  <a href="<%= user_path(user) %>"><%= render partial: "partials/users", locals: { user: user } %></a>
+  <br>
+<% end %>

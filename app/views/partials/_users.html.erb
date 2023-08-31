@@ -1,0 +1,26 @@
+<header>
+<%= stylesheet_link_tag 'user', media: 'all', 'data-turbolinks-track': 'reload' %>
+</header>
+
+<body>
+<div id="user"> 
+  <img id="user-image" src="<%= user.photo %>" alt="User Photo">
+  <article id="user-details">
+    <h1><%= user.name %></h1>
+    <p >Number of posts: <%= user.posts_counter.nil? ? 0 : user.posts_counter %></p>
+    <!-- Other user details -->
+
+    <!-- Display user's posts -->
+    <h2>Posts:</h2>
+    <ul>
+      <% user.posts.each do |post| %>
+        <li><strong><%= post.title %></strong>: <%= post.content %></li>
+      <% end %>
+    </ul>
+
+    <!-- Display user's comments -->
+    <h2>Comments:</h2>
+    <%= render partial: "partials/comments", locals: { comments: user.comments } %>
+  </article>
+</div>
+</body>

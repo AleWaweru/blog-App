@@ -1,1 +1,14 @@
 <h1>This is the list of posts</h1>
+<%= stylesheet_link_tag 'user', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= render @user%>
+<% @posts.each do |post| %>
+    <a href ="<%= user_post_path(@user, post)%>"><%= render post%></a>
+    <%= "no comments for this post" if post.comments.empty?%>
+    <div class="comments">
+    <% post.five_most_recent_comments.each do |comment|%>
+        <%="partials/comments"%>
+    <% end %>
+    </div>
+    <p id="view-post"><%= link_to 'View Post', user_post_path(@user, post) %></p>
+<% end %>
+<%= will_paginate @posts %>
