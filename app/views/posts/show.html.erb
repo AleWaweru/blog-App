@@ -1,6 +1,6 @@
 
 <%= puts "Rendering partial for posts" %>
-<%= render partial: 'partials/posts', locals: { post: @post } %>
+<%= render partial: 'partials/post', locals: { post: @post } %>
 <%= "no comments for this post" if @post.comments.empty?%>
 <div class="comments">
 <% @post.comments.each do |comment|%>

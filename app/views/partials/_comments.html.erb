@@ -1,7 +1,2 @@
-<%= stylesheet_link_tag 'post', media: 'all', 'data-turbolinks-track': 'reload' %>
-<div id="comment">
-    <% comments.each do |comment| %>
-      <p class="commentD"><strong><%= comment.author.name %></strong>: <%= comment.text %></p>
-    <% end %>
-  </div>
+<%= render_comments(@comments) %>
 
