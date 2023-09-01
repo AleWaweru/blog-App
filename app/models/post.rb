@@ -1,11 +1,11 @@
 class Post < ApplicationRecord
   validates :title, presence: true, length: { maximum: 250 }
-  validates :commentCounter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
-  validates :likesCounter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :comments_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :likes_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   # Use attribute method to alias the attribute names
-  attribute :commentCounter, :integer, default: 0
-  attribute :likesCounter, :integer, default: 0
+  attribute :comments_counter, :integer, default: 0
+  attribute :likes_counter, :integer, default: 0
 
   belongs_to :author, foreign_key: 'author_id', class_name: 'User'
   has_many :comments
