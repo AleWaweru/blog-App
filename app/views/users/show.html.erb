@@ -1,3 +1,40 @@
-<h1>
-  this is the detail page for the user with id
-</h1>
+<header>
+  <%= stylesheet_link_tag 'user', media: 'all', 'data-turbolinks-track': 'reload' %>
+</header>
+
+<body>
+  <%= render partial: "partials/users", locals: { user: @user } %>
+
+  <div id="bio">
+    Bio: <%= @user.bio %>
+  </div>
+
+  <div id="singlePost">
+    <h2>Posts</h2>
+    <ul>
+      <% @recent_posts.each do |post| %>
+        <li>
+          <%= link_to post.title, user_post_path(@user, post) %>
+          <span class="post-details">
+            Likes: <%= post.likes_counter %>
+            Comments: <%= post.comments_counter %>
+          </span>
+
+          <div class="comments-container" id="comments_for_post_<%= post.id %>">
+            <h4>Comments:</h4>
+            <ul>
+              <% post.comments.each do |comment| %>
+                <li><%= comment.text %></li>
+              <% end %>
+            </ul>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="button-container">
+    <button><a href="<%= user_posts_path(@user) %>">See all posts</a></button>
+  </div>
+</body>
+

@@ -1,0 +1,79 @@
+:root {
+  --purple: rgb(15, 16, 112);
+  --light_purple: rgb(214, 180, 244);
+}
+
+body {
+  margin: 3rem 2rem;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+#user {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+#user-image {
+  min-height: 9rem;
+  min-width: 9rem;
+  border: 0.2rem solid rgb(47, 7, 99);
+}
+
+#user-details {
+  min-height: 7rem;
+  min-width: calc(100% - 10rem);
+  border: 0.2rem solid rgb(47, 7, 99);
+  margin-right: 10px;
+}
+
+#user-details h1 {
+  margin-left: 1rem;
+}
+
+#user-details p {
+  text-align: end;
+  margin-right: 1rem;
+}
+
+#bio {
+  min-height: 6rem;
+  border: 0.2rem solid var(--purple);
+  margin-top: 2rem;
+}
+
+#singlePost {
+  min-height: 6rem;
+  border: 0.2rem solid var(--purple);
+  margin-top: 2rem;
+}
+
+#singlePost span {
+  float: right;
+  margin-right: 10px;
+}
+
+.comments-container {
+  border: 0.2rem solid var(--light_purple);/* Add your desired border style here */
+  padding: 10px; /* Add padding for spacing */
+  margin-top: 10px; /* Add margin to separate it from the post details */
+  margin-right: 10px;
+}
+
+.button-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background-color: var(--light_purple);
+  min-height: 2rem;
+  border: 0.2rem solid var(--purple);
+  border-radius: 5px;
+}

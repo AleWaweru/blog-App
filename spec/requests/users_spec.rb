@@ -1,5 +1,4 @@
 require 'rails_helper'
-
 describe UsersController, type: :request do
   before do
     @user = User.create(name: 'Sam', photo: 'photo.url', bio: 'Excellent', posts_counter: 0)
