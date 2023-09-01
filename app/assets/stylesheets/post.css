@@ -13,3 +13,7 @@
   text-decoration: underline;
   color: var(--purple);
 }
+
+.commentD {
+  display: flex;
+}

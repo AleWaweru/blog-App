@@ -1,7 +1,7 @@
-<div class="card bg-success">
-  <div class="card-body">
+<%= stylesheet_link_tag 'post', media: 'all', 'data-turbolinks-track': 'reload' %>
+<div id="comment">
     <% comments.each do |comment| %>
-      <p><strong><%= comment.author.name %></strong>: <%= comment.text %></p>
+      <p class="commentD"><strong><%= comment.author.name %></strong>: <%= comment.text %></p>
     <% end %>
   </div>
-</div>
+
