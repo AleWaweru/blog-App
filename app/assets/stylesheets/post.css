@@ -15,10 +15,6 @@
   color: var(--purple);
 }
 
-.commentD {
-  display: flex;
-}
-
 form {
   display: flex;
   align-items: center;
