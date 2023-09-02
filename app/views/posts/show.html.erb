@@ -3,7 +3,7 @@
 
 <div class="container ">
   <a href="/users/<%= @post.author.id %>/posts/<%= @post.id %>" class="text-decoration-none">
-    <div class="mb-3">
+    <div>
       <%= render 'partials/post', post: @post %>
       <div class="container">
         <%= link_to 'Add a new comment', "/users/#{@current_user.id}/posts/#{@post.id}/comments/new", class: "submit_button" %>
