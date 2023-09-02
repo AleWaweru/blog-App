@@ -2,6 +2,7 @@
 .comments {
   border: 0.2rem solid var(--purple);
   margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 #comments-likes {
@@ -16,4 +17,41 @@
 
 .commentD {
   display: flex;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.like-comment {
+  display: flex;
+  justify-content: space-around;
+}
+
+#liked {
+  display: flex;
+  background-color: rgb(183, 140, 183);
+  border-radius: 5px;
+  padding: 0;
+  height: 2rem;
+  min-width: 4rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.submit_button {
+  min-width: 4rem;
+  border: 2rem black;
+  color: rgb(235, 239, 241);
+  background-color: blue;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.container {
+  background: rgb(238, 238, 241);
 }
