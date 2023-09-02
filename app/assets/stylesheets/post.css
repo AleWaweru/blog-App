@@ -10,11 +10,6 @@
   padding-right: 1rem;
 }
 
-#view-post {
-  text-decoration: underline;
-  color: var(--purple);
-}
-
 form {
   display: flex;
   align-items: center;
