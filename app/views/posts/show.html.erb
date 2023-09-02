@@ -8,7 +8,6 @@
       <div class="container">
         <%= link_to 'Add a new comment', "/users/#{@current_user.id}/posts/#{@post.id}/comments/new", class: "submit_button" %>
         
-        <!-- Add a link to create a new post -->
         <%= link_to 'Create a new post', new_user_post_path(@current_user), class: "submit_button" %>
         
         <%= render partial: "partials/like", locals: { like: Like.new, post_id: @post.id, user_id: @post.author.id } %>
