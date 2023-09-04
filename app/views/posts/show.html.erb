@@ -1,9 +1,18 @@
+<%= stylesheet_link_tag 'post', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag 'user', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-<%= puts "Rendering partial for posts" %>
-<%= render partial: 'partials/post', locals: { post: @post } %>
-<%= "no comments for this post" if @post.comments.empty?%>
-<div class="comments">
-<% @post.comments.each do |comment|%>
-        <%=render "partials/comments" %>
-<% end %>
+<div class="container ">
+  <a href="/users/<%= @post.author.id %>/posts/<%= @post.id %>" class="text-decoration-none">
+    <div>
+      <%= render 'partials/post', post: @post %>
+      <div class="container">
+        <%= link_to 'Add a new comment', "/users/#{@current_user.id}/posts/#{@post.id}/comments/new", class: "submit_button" %>
+        
+        <%= link_to 'Create a new post', new_user_post_path(@current_user), class: "submit_button" %>
+        
+        <%= render partial: "partials/like", locals: { like: Like.new, post_id: @post.id, user_id: @post.author.id } %>
+      </div>
+      <%= render 'partials/comments', comments: @post.comments unless @post.comments.empty? %>
+    </div>
+  </a>
 </div>
