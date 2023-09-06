@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all.order(id: :asc)
+    @users = User.all.includes(:posts).order(id: :asc)
   end
 
   def show
     @user = User.find(params[:id])
     @recent_posts = @user.return_three_most_recent_posts(3)
-    @posts = @user.posts # Assuming you have a posts association on the User model
+    @posts = @user.posts.includes(:author) # Include author information to further optimize
   end
 end

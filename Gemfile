@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.2'
@@ -7,6 +8,9 @@ ruby '3.1.2'
 gem 'rails', '~> 7.0.7'
 
 gem 'rubocop', '>= 1.0', '< 2.0'
+
+gem 'factory_bot_rails', '~> 6.2'
+
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
