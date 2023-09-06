@@ -12,6 +12,10 @@ RSpec.feature 'User Index', type: :feature do
       expect(page).to have_content('mark')
     end
 
+    it 'displays the user profile picture' do
+      expect(page.has_xpath?("//img[@src='Your Profile Picture URL']"))
+    end
+
     it 'displays the number of posts of each user' do
       expect(page).to have_content('Number of posts: 3')
     end
