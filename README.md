@@ -104,6 +104,11 @@ rails db:migrate
 - Twitter: [@twitterhandle](https://twitter.com/ngashalex)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/alex-ng-ang-a-waweru-2b2701180/)
 
+👤 **Author2**
+
+- GitHub: [@bronnie313](https://github.com/bronnie313)
+- Twitter: [@bisaso_r](https://twitter.com/bisaso_r)
+- LinkedIn: [Ronald Bisaso](https://www.linkedin.com/in/ronnie-bisaso-758017120/)
 
 ## 🔭 Future Features <a name="future-features"></a>
 - [ ] Build and deploy the whole application.
