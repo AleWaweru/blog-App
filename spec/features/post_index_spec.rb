@@ -21,9 +21,9 @@ RSpec.feature 'Post Index Page', type: :feature do
       expect(page).to have_content('Number of posts: 1') # Adjust the count as needed
     end
 
-    # it 'displays a post\'s title' do
-    #   expect(page).to have_content('Hello')
-    # end
+    it 'displays a post\'s title' do
+      expect(page).to have_content('Hello')
+    end
 
     it 'displays some of the post\'s body' do
       expect(page).to have_content('Hello') # You can adjust the content as needed
