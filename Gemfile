@@ -11,11 +11,9 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 
 gem 'factory_bot_rails', '~> 6.2'
 
-
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
-# Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 
 # Use the Puma web server [https://github.com/puma/puma]
