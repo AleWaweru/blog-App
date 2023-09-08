@@ -10,11 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema[7.0].define(version: 2023_09_08_055227) do
-=======
+
 ActiveRecord::Schema[7.0].define(version: 2023_09_07_070956) do
->>>>>>> 4f41bc593566ef2a277b63ee595040428a70daa2
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -76,10 +73,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_07_070956) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string "unconfirmed_email"
-<<<<<<< HEAD
+<<<<<<<<< Temporary merge branch 1
+=========
     t.string "role"
-=======
->>>>>>> 4f41bc593566ef2a277b63ee595040428a70daa2
+>>>>>>>>> Temporary merge branch 2
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
