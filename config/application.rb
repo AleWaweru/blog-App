@@ -4,6 +4,8 @@ require "rails/all"
 
 require 'will_paginate'
 
+# config/application.rb or an initializer
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)

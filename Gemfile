@@ -10,7 +10,6 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 
 gem 'factory_bot_rails', '~> 6.2'
 
-# The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
 gem 'pg', '~> 1.1'
@@ -48,11 +47,7 @@ gem 'will_paginate', '~> 3.1.1'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
-# Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', require: false
-
-gem 'cancancan'
-
+# Reduces boot times through caching; required in config/boot.
 # Use Sass to process CSS
 # gem "sassc-rails"
 
@@ -84,3 +79,5 @@ group :test do
 end
 
 gem 'tailwindcss-rails', '~> 2.0'
+
+gem 'devise', '~> 4.9'
