@@ -1,0 +1,46 @@
+.login-container {
+  text-align: center;
+  background-color: rgb(232, 236, 235);
+  padding: 40px;
+  width: 50%;
+  margin-left: 20rem;
+  margin-top: 5rem;
+  border-radius: 20px;
+}
+
+.sign-form {
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+}
+
+.field {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.sign {
+  background: rgb(7, 102, 146);
+  border: none;
+  font-size: 15px;
+  width: 100%;
+  padding: 5px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.sign-form .field input[type="text"],
+.sign-form .field input[type="email"],
+.sign-form .field input[type="password"] {
+  width: 100%;
+}
+
+.login {
+  background: rgb(7, 102, 146);
+  border: none;
+  font-size: 15px;
+  width: 100%;
+  padding: 5px;
+  border-radius: 10px;
+  margin-top: 10px;
+}

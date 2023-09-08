@@ -53,6 +53,10 @@ gem 'bootsnap', require: false
 
 gem 'cancancan'
 
+# Email Confirmation
+gem 'letter_opener', group: :development
+
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
@@ -84,3 +88,5 @@ group :test do
 end
 
 gem 'tailwindcss-rails', '~> 2.0'
+
+gem 'devise', '~> 4.9'
