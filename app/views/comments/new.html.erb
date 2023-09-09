@@ -5,18 +5,16 @@
     <div class="col-md-6">
       <h1 class="text-center mb-4">Add Comments to Post</h1>
 
-      <%= form_with model: @comment, url: user_post_comments_path, local: true do |form| %>
+      <%= form_for [@user, @post, @comment] do |f| %>
         <div class="form-group">
-          <%= form.label :text %>
-          <%= form.text_area :text, class: "form-control", placeholder: "Add your comment" %>
+          <%= f.label :text %>
+          <%= f.text_area :text, class: "form-control", placeholder: "Add your comment" %>
         </div>
         
-        <h1>Cool</h1>
-
-        <%= form.submit "Add Comment", class: "btn btn-primary btn-block" %>
+        <%= f.submit 'Submit', class: "btn btn-primary" %>
 
         <% if can? :destroy, @comment %>
-          <%= link_to 'Delete Comment', @comment, method: :delete, data: { confirm: 'Are you sure you want to delete this comment?' } %>
+          <%= link_to 'Delete Comment', user_post_comments_path(user_id: @post.author.id, post_id: @post.id, id: @comment.id), method: :delete, data: { confirm: 'Are you sure you want to delete this comment?' }, class: "btn btn-danger" %>
         <% end %>
       <% end %>
     </div>

@@ -4,6 +4,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.2'
 
+gem 'letter_opener', group: :development
+
+gem 'cancancan'
+
 gem 'rails', '~> 7.0.7'
 
 gem 'rubocop', '>= 1.0', '< 2.0'

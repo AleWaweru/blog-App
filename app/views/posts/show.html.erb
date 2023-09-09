@@ -1,17 +1,31 @@
 <%= stylesheet_link_tag 'post', media: 'all', 'data-turbolinks-track': 'reload' %>
 <%= stylesheet_link_tag 'user', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-<div class="container ">
+<div class="container">
+  <!-- Link to the individual post -->
   <a href="/users/<%= @post.author.id %>/posts/<%= @post.id %>" class="text-decoration-none">
     <div>
+      <!-- Render the partial for displaying the post -->
       <%= render 'partials/post', post: @post %>
+
       <div class="container">
+        <!-- Link to add a new comment -->
         <%= link_to 'Add a new comment', "/users/#{@current_user.id}/posts/#{@post.id}/comments/new", class: "submit_button" %>
         
+        <!-- Link to create a new post -->
         <%= link_to 'Create a new post', new_user_post_path(@current_user), class: "submit_button" %>
-        
+
+        <!-- Delete post link, if user is authorized -->
+  <!-- Delete post link, if user is authorized -->
+<%= link_to 'Delete Post', user_post_path(@post.author, @post), method: :delete, data: { confirm: 'Are you sure?' } %>
+
+ <% if can? :destroy, @comment %>
+  <%= link_to 'Delete Comment', user_post_comment_path(user_id: @post.author.id, post_id: @post.id, id: @comment.id), method: :delete, data: { confirm: 'Are you sure you want to delete this comment?' } %>
+<% end %>
+        <!-- Render the partial for liking -->
         <%= render partial: "partials/like", locals: { like: Like.new, post_id: @post.id, user_id: @post.author.id } %>
       </div>
+      <!-- Render comments partial if comments are present -->
       <%= render 'partials/comments', comments: @post.comments unless @post.comments.empty? %>
     </div>
   </a>

@@ -10,8 +10,4 @@
   </div>
 
   <%= form.submit "Create Post", class: "btn btn-primary btn-block" %>
-
-  <% if can? :destroy, @post %>
-    <%= link_to 'Delete Post', @post, method: :delete, data: { confirm: 'Are you sure you want to delete this post?' } %>
-  <% end %>
 <% end %>

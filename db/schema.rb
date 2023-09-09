@@ -73,10 +73,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_07_070956) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string "unconfirmed_email"
-<<<<<<<<< Temporary merge branch 1
-=========
     t.string "role"
->>>>>>>>> Temporary merge branch 2
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 

@@ -27,6 +27,5 @@ class Post < ApplicationRecord
   def initialize_counters
     self.comments_counter = 0
     self.likes_counter = 0
-    # No need to set posts_counter here; it's already set to 0 by default
   end
 end
