@@ -111,6 +111,12 @@ rails db:migrate
 - Twitter: [@bisaso_r](https://twitter.com/bisaso_r)
 - LinkedIn: [Ronald Bisaso](https://www.linkedin.com/in/ronnie-bisaso-758017120/)
 
+👤 **Abdelaziz Soliman**
+
+- GitHub: [@abdelazizsoliman](https://github.com/abdelazizsoliman)
+- Twitter: [@Abdelaz21958317](https://twitter.com/Abdelaz21958317)
+- LinkedIn: [Abdelaziz Soliman](https://www.linkedin.com/in/abdelazizsoliman)
+
 ## 🔭 Future Features <a name="future-features"></a>
 - [ ] Build and deploy the whole application.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
