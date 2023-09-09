@@ -10,4 +10,14 @@ module ApplicationHelper
       end.join.html_safe
     end
   end
+
+ 
+    def render_field(form, attribute, placeholder, autofocus = false)
+      content_tag(:div, class: 'field') do
+        concat(form.label attribute, class: 'v-hidden')
+        options = { autofocus: autofocus, autocomplete: attribute.to_s }
+        concat(form.text_field(attribute, options.merge(class: 'input-field', placeholder: placeholder)))
+      end
+    end
+  
 end
