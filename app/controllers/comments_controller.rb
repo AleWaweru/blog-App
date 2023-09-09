@@ -17,10 +17,6 @@ class CommentsController < ApplicationController
     end
   end
 
-  def show
-    @comment = Comment.find(params[:id])
-  end
-
   def destroy
     @comment = Comment.find(params[:id])
     authorize! :destroy, @comment
@@ -30,8 +26,11 @@ class CommentsController < ApplicationController
                 notice: 'Comment deleted successfully!'
   end
 
-  private
+  def show
+    @comment = Comment.find(params[:id])
+  end
 
+  private
   def comment_params
     params.require(:comment).permit(:text)
   end
