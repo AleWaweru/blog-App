@@ -27,3 +27,9 @@ button,
   border: 0.2rem solid var(--purple);
   border-radius: 5px;
 }
+
+.comment_div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

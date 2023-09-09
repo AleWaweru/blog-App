@@ -1,7 +1,11 @@
+<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 <div class="card bg-success">
   <div class="card-body">
     <% comments.each do |comment| %>
+    <div class="comment_div">
       <p><%= comment.author.name %>: <%= comment.text %></p>
+      <%= button_to 'Delete', user_post_comment_path(@post.author, @post, comment), method: :delete, class: 'btn btn-light text-danger btn-sm'%>
+      </div>
     <% end %>
   </div>
 </div>

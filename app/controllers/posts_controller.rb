@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @posts = Post.includes(:author)
       .includes(:comments)
@@ -18,8 +20,13 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to user_posts_path(current_user), notice: 'Post deleted successfully!'
+  end
+
   def create
-    @post = current_user.posts.build(post_params)
     @post.comments_counter = 0 # Set the initial value for comments_counter
     @post.likes_counter = 0 # Set the initial value for likes_counter
 

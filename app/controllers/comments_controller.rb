@@ -1,7 +1,8 @@
 class CommentsController < ApplicationController
   def new
-    @comment = Comment.new
+    @user = User.find(params[:user_id])
     @post = Post.find(params[:post_id])
+    @comment = Comment.new
   end
 
   def create
@@ -14,6 +15,19 @@ class CommentsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    authorize! :destroy, @comment
+
+    @comment.destroy
+    redirect_to user_post_path(user_id: @comment.post.author.id, id: @comment.post.id),
+                notice: 'Comment deleted successfully!'
+  end
+
+  def show
+    @comment = Comment.find(params[:id])
   end
 
   private

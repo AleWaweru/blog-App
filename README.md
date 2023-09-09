@@ -15,6 +15,7 @@
   <!-- - [🚀 Live Demo](#live-demo) -->
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
+  
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
@@ -109,6 +110,12 @@ rails db:migrate
 - GitHub: [@bronnie313](https://github.com/bronnie313)
 - Twitter: [@bisaso_r](https://twitter.com/bisaso_r)
 - LinkedIn: [Ronald Bisaso](https://www.linkedin.com/in/ronnie-bisaso-758017120/)
+
+👤 **Abdelaziz Soliman**
+
+- GitHub: [@abdelazizsoliman](https://github.com/abdelazizsoliman)
+- Twitter: [@Abdelaz21958317](https://twitter.com/Abdelaz21958317)
+- LinkedIn: [Abdelaziz Soliman](https://www.linkedin.com/in/abdelazizsoliman)
 
 ## 🔭 Future Features <a name="future-features"></a>
 - [ ] Build and deploy the whole application.

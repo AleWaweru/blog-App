@@ -1,7 +1,7 @@
 class Post < ApplicationRecord
   belongs_to :author, class_name: 'User', foreign_key: 'author_id'
-  has_many :likes
-  has_many :comments
+  has_many :likes, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   validates :title, presence: true, length: { in: 3..250 }
   validates :content, presence: true, length: { in: 3..100 }
@@ -27,6 +27,5 @@ class Post < ApplicationRecord
   def initialize_counters
     self.comments_counter = 0
     self.likes_counter = 0
-    # No need to set posts_counter here; it's already set to 0 by default
   end
 end

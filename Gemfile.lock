@@ -81,6 +81,7 @@ GEM
       popper_js (>= 2.11.8, < 3)
       sassc-rails (>= 2.0.0)
     builder (3.2.4)
+    cancancan (3.5.0)
     capybara (3.39.2)
       addressable
       matrix
@@ -110,7 +111,7 @@ GEM
     factory_bot_rails (6.2.0)
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
-    ffi (1.15.5-x64-mingw-ucrt)
+    ffi (1.15.5)
     globalid (1.1.0)
       activesupport (>= 5.0)
     i18n (1.14.1)
@@ -305,6 +306,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   bootstrap
+  cancancan
   capybara
   debug
   devise (~> 4.9)
@@ -329,7 +331,7 @@ DEPENDENCIES
   will_paginate (~> 3.1.1)
 
 RUBY VERSION
-   ruby 3.1.2p20
+   ruby 3.2.2p53
 
 BUNDLED WITH
    2.3.22
