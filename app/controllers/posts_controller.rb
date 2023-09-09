@@ -22,7 +22,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.destroy
     redirect_to user_posts_path(current_user), notice: 'Post deleted successfully!'
-  end  
+  end
 
   def create
     @post = current_user.posts.build(post_params)
