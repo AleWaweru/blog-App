@@ -28,7 +28,7 @@ button,
   border-radius: 5px;
 }
 
-.comment_div{
+.comment_div {
   display: flex;
   flex-direction: row;
   align-items: center;
